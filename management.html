@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="widtd=device-widtd, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+        margin: 0px;
+        padding: 0px;
+        background-color: #343434;
+        color: white;
+        }
+        #image-container {
+            margin-top: 20px;
+            margin-left: 20px;
+            width: 100px;
+            height: 100px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            background-color: white;
+            border-radius: 100px;
+        }
+        #image {
+            width: 100%;
+            height: 100%;
+        }
+        .white {background-color: white;
+        width: 530px;
+        height: 15px;
+        color:black;
+        text-align: center;}
+
+        input[type=checkbox]{margin: 0 10px 0 10px ;}
+
+        #list td{padding: 0 5px 0 5px;}
+    </style>
+</head>
+<body>
+    <table>
+    <tr><td><div id="image-container" style="display: inline-block; text-align: center; ">
+            <img src="" id="image" alt="[여길 누르면프로필 편집]">
+    </div></td><td>
+        <h1 style="display: inline-block; padding-top: 15px; padding-left: 10px;">이름</h1></td>
+        </table>
+        <br>
+
+        <table>
+            <tr id="list">
+                <td>작성글 | </td>
+                <td>작성댓글 | </td>
+                <td>좋아요한 글 | </td>
+                <td>좋아요한 댓글 | </td>
+                <td>삭제한 글 | </td>
+                <td>삭제한 댓글 </td>
+            </tr>
+        </table>
+        <hr>
+        <form>
+            <table>
+                <tr><td><input type="checkbox"></td><td class="white">글1</td></tr>
+                <tr><td><input type="checkbox"></td><td class="white">글2</td></tr>
+                <tr><td><input type="checkbox"></td><td class="white">글3</td></tr>
+                <tr><td><input type="checkbox"></td><td class="white">글4</td></tr>
+                <tr><td><input type="checkbox"></td><td class="white">글5</td></tr>
+                <tr><td><input type="checkbox"></td><td class="white">글6</td></tr>
+            </table><hr>
+            <input type="button" name="delete" value="삭제" style="font-weight: 900; padding: 5px 13px 5px 13px; float: right;">
+        </form>
+        
+    </div>
+</body>
+</html>

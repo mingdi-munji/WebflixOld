@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+        margin: 0px;
+        padding: 0px;
+        background-color: #343434;
+        color: white;
+        }
+        #contents {width:98%; height:300pt; text-align: center;}
+        p {display: inline-block;}
+        #whole {background-color: white;width:40%; color: black;}
+        header {padding-left: 20px;}
+        h3 {padding-left: 10px;}
+        #title {width:35%; height: 20pt}
+        #submit {float: right; width:50pt;height: 30pt; font-weight: 900; font-size: 13pt;}
+    </style>
+</head>
+<body>
+    <form>
+    <h3 >
+        제목 : <input type="text" id="title">
+    </h3>
+    <section>
+        <div id="whole">
+            <header>
+                <p>글꼴 크기</p><p> / </p><p>스타일(클릭시 글자 색 변경)</p>
+                <input type="button" value="이미지,파일 업로드"><br>
+                
+                글의 게시판 목록<select name="postlist">
+                    <option>여기에 목록 관련 DB코드 사용</option>
+                </select>
+            </header>
+            <hr style="border-width: 2pt;border-style: solid;">
+            <section>
+                <input type="text" id="contents" placeholder="여기에 내용 작성">
+            </section>
+        </div>
+        <hr>
+        <input type="submit" id="submit" value="등록">
+    </section>
+    </form>
+</body>
+</html>

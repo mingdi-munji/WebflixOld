@@ -2,6 +2,7 @@ package com.webflix.controller.login;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Map;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -9,14 +10,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.webflix.controller.Controller;
+import com.webflix.controller.ModelAndView;
 import com.webflix.controller.View;
 
-public class Login implements Controller {
+public class LoginForm implements Controller {
 
 	@Override
-	public View process(HttpServletRequest request, HttpServletResponse resonse) throws ServletException, IOException {
+	public ModelAndView process(Map<String, String> paramMap) {
 		
-		return new View("/WEB-INF/views/login-form.jsp");
+		return new ModelAndView("login-form");
 	}
 	
 }

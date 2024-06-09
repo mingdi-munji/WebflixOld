@@ -1,5 +1,5 @@
 package com.webflix.controller.upload;
 
-public class Upload {
+public class UploadForm {
 
 }

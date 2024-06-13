@@ -10,5 +10,5 @@ import javax.servlet.http.HttpServletResponse;
 public interface Controller {
 	
 //	View process(HttpServletRequest request, HttpServletResponse resonse) throws ServletException, IOException;
-	ModelAndView process(Map<String, String> paramMap);
+	String process(Map<String, String> paramMap);
 }

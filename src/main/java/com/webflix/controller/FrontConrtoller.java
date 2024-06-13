@@ -30,6 +30,7 @@ public class FrontConrtoller extends HttpServlet{
 		System.out.println("FrontConrtoller.service()");
 		
 		String requestURI = request.getRequestURI();	
+		
 		Controller controller = uriMap.get(requestURI);
 		if (controller == null) {
 			response.setStatus(HttpServletResponse.SC_NOT_FOUND); //없으면 404 
@@ -37,22 +38,24 @@ public class FrontConrtoller extends HttpServlet{
 		}
 		
 		Map<String, String> paramMap = createParamMap(request); //값 꺼내는 Method호출 
-		ModelAndView mv = controller.process(paramMap); 
+		Map<String, Object> model = new HashMap<>();
 		
-		String viewName = mv.getViewName();
+		String viewName = controller.process(paramMap);
+		
 		View view = viewResolver(viewName);
-		view.render(mv.getModel(), request, response);
+		view.render(model, request, response);
 		 	
 	}
 
-	private View viewResolver(String viewName) {
-		return new View("/WEB/INF/views" + viewName + ".jsp");
-	}
-	
 	//request.getParameterNames를 통해 값을 전부 꺼낸 후 paramMap에 넣어둔다 
 	private Map<String, String> createParamMap(HttpServletRequest request) {
 		Map<String, String> paramMap = new HashMap<>();
 		request.getParameterNames().asIterator().forEachRemaining(paramName -> paramMap.put(paramName, request.getParameter(paramName)));
 		return paramMap;
 	}
+	
+	private View viewResolver(String viewName) {
+		return new View("/WEB-INF/views/" + viewName + ".jsp");
+	}
+	
 }

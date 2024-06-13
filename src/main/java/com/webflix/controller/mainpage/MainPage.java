@@ -15,8 +15,11 @@ import com.webflix.controller.View;
 public class MainPage implements Controller {
 
 	@Override
-	public ModelAndView process(Map<String, String> paramMap) {
-		return new ModelAndView("index");
+	public String process(Map<String, String> paramMap) {
+		
+		System.out.println("MainPage.process()");
+		return "index";
 	}
 
+	
 }

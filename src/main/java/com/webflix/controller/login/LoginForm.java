@@ -16,9 +16,12 @@ import com.webflix.controller.View;
 public class LoginForm implements Controller {
 
 	@Override
-	public ModelAndView process(Map<String, String> paramMap) {
-		
-		return new ModelAndView("login-form");
+	public String process(Map<String, String> paramMap) {
+		return "login-form";
 	}
+
+
+
+
 	
 }
